@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://convert-case-tool.web.app/sitemap.xml

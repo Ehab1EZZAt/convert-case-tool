@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Convert Case Tool is a free online text formatter that helps you convert text to uppercase, lowercase, title case, camelCase, snake_case, and kebab-case easily and instantly.">
+<meta name="keywords" content="convert case, uppercase, lowercase, title case, camelCase, snake_case, kebab-case, online text converter, text case formatter, convert text online, free case converter">
+<meta name="author" content="Convert Case Tool">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="https://webifytools.com/wp-content/uploads/2025/01/Convert-Case-1.png">
+  <title>Convert Case Tool — Online Text Formatter</title>
+
+  <meta name="msvalidate.01" content="5417058AE3C24F3462E719A7C57775B1" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Convert Case Tool",
+  "url": "https://convertcasetool.com",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "description": "Convert Case Tool is a free online text formatter that lets you quickly convert text to uppercase, lowercase, title case, camelCase, snake_case, and kebab-case. Easy to use, no installation required.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Convert Case Tool",
+    "url": "https://convertcasetool.com"
+  }
+}
+</script>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Convert Case Tool</h1>
+    <p>Quickly convert your text to UPPERCASE, lowercase, Title Case & more!</p>
+  </header>
+
+  <section class="hero">
+    <h2>Make Your Text Look Just Right</h2>
+    <p>This free and simple tool helps you instantly change the case of any text — whether you're writing a headline, formatting a paragraph, or just need consistent capitalization. Paste your text below and choose your format.</p>
+  </section>
+
+  <main>
+    <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+
+    <div class="buttons">
+      <button onclick="convertCase('upper')">UPPERCASE</button>
+      <button onclick="convertCase('lower')">lowercase</button>
+      <button onclick="convertCase('title')">Title Case</button>
+      <button onclick="convertCase('sentence')">Sentence case</button>
+      <button onclick="convertCase('camel')">camelCase</button>
+      <button onclick="convertCase('snake')">snake_case</button>
+      <button onclick="convertCase('kebab')">kebab-case</button>
+    </div>
+
+    <p style="text-align:center; font-weight:500; color:#0056d2;">Your formatted text will appear below 👇</p>
+
+    <div id="output" class="output-section"></div>
+
+    <div class="buttons" style="justify-content: center; flex-direction: column; align-items: center;">
+      <button onclick="copyText()">Copy Result</button>
+      <span id="copiedMsg" style="display:none; color:green; margin-top:8px;">Copied!</span>
+      <button onclick="downloadTxt()">Download as .txt</button>
+    </div>
+
+    <p style="text-align:center; margin-top:10px; color:#666; font-size:0.9rem;">
+      Characters: <span id="charCount">0</span> | Words: <span id="wordCount">0</span>
+    </p>
+
+    <div class="section" id="how-it-works">
+      <h3>How It Works</h3>
+      <ol>
+        <li>Paste or type your text into the box above.</li>
+        <li>Choose the case format you want (uppercase, lowercase, etc.).</li>
+        <li>See the result instantly below.</li>
+        <li>Copy the result or download it if needed.</li>
+      </ol>
+    </div>
+
+    <div class="section" id="benefits">
+      <h3>Why Use This Tool</h3>
+      <p>Using Convert Case Tool gives you many advantages:</p>
+      <ul>
+        <li>Saves time in formatting large texts.</li>
+        <li>Keeps text consistent in style.</li>
+        <li>No software installation needed — works online.</li>
+        <li>Great for content creators, students, developers, and bloggers.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="examples">
+      <h3>Examples Before & After</h3>
+      <div class="example-box">
+        <strong>Original:</strong><br>
+        this is a sample sentence. this is another sentence!<br><br>
+        <strong>UPPERCASE:</strong> THIS IS A SAMPLE SENTENCE. THIS IS ANOTHER SENTENCE!<br>
+        <strong>Title Case:</strong> This Is A Sample Sentence. This Is Another Sentence!<br>
+        <strong>camelCase:</strong> thisIsASampleSentenceThisIsAnotherSentence
+      </div>
+    </div>
+
+    <div class="section" id="faq">
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      <p><strong>Q: Is the tool free to use?</strong><br>
+      A: Yes! It’s completely free.</p>
+
+      <p><strong>Q: Do we store or share your text?</strong><br>
+      A: No. We don’t store or share any input text.</p>
+
+      <p><strong>Q: Is there a limit on text size?</strong><br>
+      A: There is no strict limit, but extremely large texts may take a little longer.</p>
+    </div>
+    <div class="section" id="case-explanations">
+  <h3>Understanding Each Text Case Format</h3>
+
+  <p><strong>UPPERCASE:</strong> Converts all letters in the text to capital letters. Useful for headings, warnings, or emphasizing content. Example: <code>THIS IS AN EXAMPLE</code>.</p>
+
+  <p><strong>lowercase:</strong> Converts all letters to small letters. Useful for clean formatting, file names, or coding. Example: <code>this is an example</code>.</p>
+
+  <p><strong>Title Case:</strong> Capitalizes the first letter of each word, ideal for blog post titles and headlines. Example: <code>This Is An Example</code>.</p>
+
+  <p><strong>Sentence case:</strong> Capitalizes only the first letter of each sentence, like normal grammatical writing. Example: <code>This is an example. This is another one.</code></p>
+
+  <p><strong>camelCase:</strong> Common in programming. The first word is lowercase, and each following word starts with a capital. Example: <code>thisIsAnExample</code></p>
+
+  <p><strong>snake_case:</strong> Uses underscores between words, popular in programming and file naming. Example: <code>this_is_an_example</code></p>
+
+  <p><strong>kebab-case:</strong> Similar to snake_case but uses hyphens instead of underscores. Great for URLs and SEO. Example: <code>this-is-an-example</code></p>
+</div>
+
+<!-- END: Case Types Explained -->
+
+  </main>
+
+  <footer>
+    <nav>
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact Us</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a>
+    </nav>
+    © 2025 Convert Case Tool — Made with 💙 for simplicity
+  </footer>
+
+  
+<script src="./scripts.js"></script>
+</body>
+</html>
